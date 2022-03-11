@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
-import { signIn, signOut, useSession } from "next-auth/client";
+import { signOut, useSession } from "next-auth/client";
+
+import GithubLoginButton from "../components/GithubLoginButton/GithubLoginButton";
 
 const Home: NextPage = () => {
   const [session, loading] = useSession();
@@ -10,12 +12,7 @@ const Home: NextPage = () => {
   }
 
   if (!session) {
-    return (
-      <>
-        Not signed in <br />
-        <button onClick={() => signIn()}>Sign in</button>
-      </>
-    );
+    return <GithubLoginButton />;
   }
 
   return (
