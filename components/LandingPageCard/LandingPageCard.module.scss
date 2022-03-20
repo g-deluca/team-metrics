@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 1160px;
+
+  background-color: #e0dff7;
+  padding: 48px;
+  border-radius: 25px;
+}
+
+.header {
+  font-size: 72px;
+  line-height: 95%;
+  text-align: center;
+}
+
+.choosePlatform {
+  color: #626366;
+  font-size: 32px;
+}
